@@ -18,7 +18,6 @@ public class ListCommand extends Command {
      * @param storage Storage object that interacts with task data in hard disk.
      */
     public void execute(TaskList taskList, Ui ui, Storage storage) {
-        assert taskList != null;
         ui.list(taskList);
     }
     

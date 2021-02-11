@@ -34,9 +34,6 @@ public class DialogBox extends HBox {
      * @param img Displayed image in dialog box.
      */
     private DialogBox(String text, Image img) {
-        assert text != ""; 
-        assert img != null;
-        
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource("/view/DialogBox.fxml"));
             fxmlLoader.setController(this);
@@ -67,10 +64,7 @@ public class DialogBox extends HBox {
      * @param img Users' image.
      * @return DialogBox object.
      */
-    public static DialogBox getUserDialog(String text, Image img) {
-        assert text != "";
-        assert img != null;
-        
+    public static DialogBox getUserDialog(String text, Image img) { 
         return new DialogBox(text, img);
     }
 
@@ -82,9 +76,6 @@ public class DialogBox extends HBox {
      * @return DialogBox object.
      */
     public static DialogBox getChatDialog(String text, Image img) {
-        assert text != "";
-        assert img != null;
-        
         var db = new DialogBox(text, img);
         db.flip(); 
         return db;

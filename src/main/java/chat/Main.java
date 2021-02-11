@@ -22,8 +22,6 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) {
-        assert stage != null; 
-        
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/MainWindow.fxml"));
             MainWindow mainWindow = new MainWindow(chat);

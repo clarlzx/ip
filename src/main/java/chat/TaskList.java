@@ -23,8 +23,7 @@ public class TaskList {
      * 
      * @param tasks List of tasks.
      */
-    public TaskList(ArrayList<Task> tasks) {
-        assert tasks != null;
+    public TaskList(ArrayList<Task> tasks) { 
         this.tasks = tasks;
     }
 

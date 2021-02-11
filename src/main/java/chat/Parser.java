@@ -22,8 +22,6 @@ public class Parser {
      * @throws ChatException If command is not known by Chat the Cat.
      */
     public static Command parse(String str) throws ChatException {
-        assert str != "";
-        
         if (str.equals("list")) {
             return new ListCommand();
         } else if (str.startsWith("done")) {

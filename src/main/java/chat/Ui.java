@@ -49,9 +49,6 @@ public class Ui {
      * @param size Total number of tasks in the list of tasks.
      */
     public void showAddSuccess(Task task, int size) {
-        assert task != null; 
-        assert size > 0;
-        
         this.respondString = "Mew! I've added this task:\n" +
                 task +
                 String.format("\n** Now you have %d tasks in the list **", size);
@@ -66,9 +63,6 @@ public class Ui {
      * @param size Total number of tasks in the list of tasks.
      */
     public void showDeleteSuccess(Task task, int size) {
-        assert task != null;
-        assert size >= 0;
-        
         this.respondString = "Mew! I've removed this task:\n" + 
                 task + 
                 String.format("\n** Now you have %d tasks in the list **", size);
@@ -82,8 +76,6 @@ public class Ui {
      * @param task Task Task that has been completed.
      */
     public void showWellDone(Task task) {
-        assert task != null; 
-        
         this.respondString =  "Mew! I've marked this task as done:\n" + 
                 task + 
                 "\n* Good job, you deserve a kit-kat *";
@@ -106,8 +98,6 @@ public class Ui {
      * @param e Error message from Chat to user.
      */
     public void showError(ChatException e) { 
-        assert e.getMessage() != "";
-        
         this.respondString = e.getMessage();
         this.chatImage = errorChat;
     }
@@ -119,8 +109,6 @@ public class Ui {
      * @param taskList TaskList object that contains a list of tasks.
      */
     public void list(TaskList taskList) {
-        assert taskList != null; 
-        
         int i = 0;
         String str = " * list *\n";
         while (i < taskList.getTasks().size()) {

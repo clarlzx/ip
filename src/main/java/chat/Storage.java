@@ -34,8 +34,6 @@ public class Storage {
      * @throws ChatException If there is error loading file or file cannot be found.
      */
     public void save(TaskList taskList) throws ChatException {
-        assert taskList != null;
-        
         try {
             if (!taskList.equals(load())) {
                 String newStr = "";

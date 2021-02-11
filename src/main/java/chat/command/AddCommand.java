@@ -22,8 +22,7 @@ public class AddCommand extends Command{
      *
      * @param inputStr Inputted command string from user to Chat the Cat.
      */
-    public AddCommand(String inputStr) {
-        assert inputStr != "";
+    public AddCommand(String inputStr) { 
         this.inputStr = inputStr;
     }
 
@@ -36,9 +35,6 @@ public class AddCommand extends Command{
      * @throws ChatException If format of command is wrong.
      */
     public void execute(TaskList taskList, Ui ui, Storage storage) throws ChatException {
-        assert taskList != null; 
-        assert ui != null; 
-        assert storage != null;
         
         Task task;
         
